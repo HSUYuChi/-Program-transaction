@@ -71,8 +71,8 @@ trade[9][7]=50
 for i in range(10, len(trade)): 
     trade[i][6] = trade[i-1][6]*(2/3) + trade[i][5]*(1/3)   
     trade[i][7] = trade[i-1][7]*(2/3) + trade[i][6]*(1/3)
-pd.DataFrame(trade).head()  
+pd.DataFrame(trade).head(30)  
 for i in range(10, len(trade)):
     if(trade[i][6] > trade[i][7])and(trade[i-1][6]<=trade[i-1][7]):
         trade[i][8] = 1     
-pd.DataFrame(trade).head()        
+pd.DataFrame(trade).head(50)        
